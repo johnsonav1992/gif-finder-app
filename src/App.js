@@ -7,11 +7,11 @@ function App() {
 	return (
 		<div className="outer-container">
 			<h1 className="title">Find a GIF!</h1>
-			<InputForm></InputForm>
+			<InputForm />
 			<div className="display-container">
-				<GifDisplay></GifDisplay>
-				<Button></Button>
-				<Button></Button>
+				<GifDisplay />
+				<Button>{'❮'}</Button>
+				<Button>{'❯'}</Button>
 			</div>
 		</div>
 	)
