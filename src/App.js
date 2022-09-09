@@ -11,6 +11,8 @@ function reducer(state, action) {
 			return { index: state.index++ }
 		case 'decrement':
 			return { index: state.index-- }
+		case 'reset':
+			return { index: (state.index = 0) }
 		default:
 			throw new Error()
 	}
