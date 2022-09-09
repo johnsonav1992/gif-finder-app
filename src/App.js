@@ -43,20 +43,20 @@ function App() {
 	}
 
 	const decrementIndex = () => {
-		if (state.index <= 0) {
-			dispatch({ type: 'reset' })
-		}
+		// if (state.index <= 0) {
+		// 	dispatch({ type: 'reset' })
+		// }
 		dispatch({ type: 'decrement' })
 		console.log(state.index)
 	}
 
 	const incrementIndex = () => {
-		if (loadedGifs.length === 0) {
-			dispatch({ type: 'reset' })
-		}
-		if (state.index === loadedGifs.length - 1) {
-			dispatch({ type: 'reset' })
-		}
+		// if (loadedGifs.length === 0) {
+		// 	dispatch({ type: 'reset' })
+		// }
+		// if (state.index === loadedGifs.length - 1) {
+		// 	dispatch({ type: 'reset' })
+		// }
 		dispatch({ type: 'increment' })
 		console.log(state.index)
 	}
