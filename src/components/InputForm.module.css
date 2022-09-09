@@ -5,6 +5,7 @@
 }
 
 .input {
+    width: 100%;
     font-size: 1.5rem;
     padding: .3rem;
     border-radius: .5rem;
@@ -16,6 +17,7 @@
 }
 
 .button {
+    width: auto;
     font-size: 1rem;
     font-weight: bold;
     font-family: sans-serif;
@@ -33,6 +35,6 @@
 @media (max-width: 500px) {
     .form {
         justify-content: center;
-        width: 100%;
+        width: 90vw;
     }
 }
