@@ -11,8 +11,8 @@ function reducer(state, action) {
 			return { index: state.index++ }
 		case 'decrement':
 			return { index: state.index-- }
-		// case 'reset':
-		// 	return { index: (state.index = 0) }
+		case 'reset':
+			return { index: (state.index = 0) }
 		default:
 			throw new Error()
 	}
@@ -24,7 +24,7 @@ function App() {
 	const [state, dispatch] = useReducer(reducer, { index: 0 })
 
 	const getGifs = input => {
-		// dispatch({ type: 'reset' })
+		dispatch({ type: 'reset' })
 		axios
 			.get(
 				`https://api.giphy.com/v1/gifs/search?api_key=p0er3aF0kTxsVVKmvHXKcba3w5h953Vy&q=${input}&limit=50&offset=0&rating=g&lang=en`
@@ -34,6 +34,7 @@ function App() {
 				const gifImgArr = gifs.map(
 					gifObj => gifObj.images.downsized.url
 				)
+				console.log(gifImgArr)
 				setLoadedGifs(gifImgArr)
 			})
 			.catch(err => {
@@ -42,14 +43,22 @@ function App() {
 	}
 
 	const decrementIndex = () => {
-		if (state.index <= 0) return
+		if (state.index <= 0) {
+			dispatch({ type: 'reset' })
+		}
 		dispatch({ type: 'decrement' })
+		console.log(state.index)
 	}
 
 	const incrementIndex = () => {
-		if (loadedGifs.length === 0) return
-		if (state.index === loadedGifs.length - 1) return
+		if (loadedGifs.length === 0) {
+			dispatch({ type: 'reset' })
+		}
+		if (state.index === loadedGifs.length - 1) {
+			dispatch({ type: 'reset' })
+		}
 		dispatch({ type: 'increment' })
+		console.log(state.index)
 	}
 
 	return (
