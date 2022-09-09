@@ -22,3 +22,9 @@
 	-moz-text-fill-color: transparent;
     filter: drop-shadow(3px 2px 2px black)
 }
+
+@media (max-width: 500px) {
+	.text, .text:hover {
+		font-size: 2rem;
+	}
+}

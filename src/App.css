@@ -28,6 +28,7 @@ h2 {
   letter-spacing: .2rem;
   font-weight: normal;
   color: white;
+  text-align: center;
 }
 
 h1 {
@@ -69,6 +70,14 @@ h1 {
 
   .wrapper {
     width: 100%;
+  }
+
+  h2 {
+    font-size: auto;
+  }
+
+  .display-container {
+    gap: .5rem;
   }
 
 }
