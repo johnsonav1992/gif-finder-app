@@ -29,3 +29,10 @@
     background-color: #232323;
     cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .form {
+        justify-content: center;
+        width: 100%;
+    }
+}
