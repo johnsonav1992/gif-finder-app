@@ -9,9 +9,9 @@ function reducer(state, action) {
 	console.log('reducer fired')
 	switch (action.type) {
 		case 'increment':
-			return { index: state.index++ }
+			return { index: state.index += 1 }
 		case 'decrement':
-			return { index: state.index-- }
+			return { index: state.index += 1}
 		case 'reset':
 			return { index: (state.index = 0) }
 		default:
