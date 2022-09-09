@@ -7,8 +7,6 @@ import axios from 'axios'
 
 function reducer(state, action) {
 	switch (action.type) {
-		case 'reset':
-			return { index: (state.index = 0) }
 		case 'increment':
 			return { index: state.index++ }
 		case 'decrement':
