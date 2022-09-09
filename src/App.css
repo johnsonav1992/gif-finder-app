@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -9,5 +11,61 @@
 }
 
 body {
-  background-color: #232323;
+  background-color: #141414;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.display-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'monoton';
+  font-size: 1.25rem;
+  letter-spacing: .2rem;
+  font-weight: normal;
+  color: white;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.react {
+ max-height: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  font-family: 'Monoton', sans-serif;
+  font-size: 5rem;
+	background-image: linear-gradient(90deg, #4863ae, #5bd93f);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+    filter: drop-shadow(3px 3px 5px black)
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 3rem;
+  }
+
 }

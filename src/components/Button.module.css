@@ -1,11 +1,11 @@
-button {
+.btn {
 	background-color: transparent;
     border: none;
 }
 
-p {
+.text {
 	font-size: 5rem;
-	background-image: linear-gradient(45deg, #2b4faf, #2eab11);
+	background-image: linear-gradient(45deg, #4863ae, #5bd93f);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
@@ -13,9 +13,9 @@ p {
     filter: drop-shadow(3px 3px 5px black)
 }
 
-p:hover {
+.text:hover {
     cursor: pointer;
-    background-image: linear-gradient(45deg, #4863ae, #5bd93f);
+	background-image: linear-gradient(45deg, #2b4faf, #2eab11);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-background-clip: text;
