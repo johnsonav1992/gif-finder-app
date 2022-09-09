@@ -20,7 +20,6 @@ function reducer(state, action) {
 }
 
 function App() {
-	// const [receivedInput, setReceivedInput] = useState('')
 	const [loadedGifs, setLoadedGifs] = useState('')
 	const [state, dispatch] = useReducer(reducer, { index: 0 })
 

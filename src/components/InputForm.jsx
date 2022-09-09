@@ -7,6 +7,7 @@ const InputForm = props => {
   function submitHandler(e) {
     e.preventDefault()
     props.onReceiveInput(input)
+	setInput('')
   }
   
 
