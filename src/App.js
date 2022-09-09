@@ -6,6 +6,7 @@ import InputForm from './components/InputForm'
 import axios from 'axios'
 
 function reducer(state, action) {
+	console.log('reducer fired')
 	switch (action.type) {
 		case 'increment':
 			return { index: state.index++ }
