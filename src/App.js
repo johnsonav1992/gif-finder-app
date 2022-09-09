@@ -11,8 +11,8 @@ function reducer(state, action) {
 			return { index: state.index++ }
 		case 'decrement':
 			return { index: state.index-- }
-		case 'reset':
-			return { index: (state.index = 0) }
+		// case 'reset':
+		// 	return { index: (state.index = 0) }
 		default:
 			throw new Error()
 	}
@@ -24,7 +24,7 @@ function App() {
 	const [state, dispatch] = useReducer(reducer, { index: 0 })
 
 	const getGifs = input => {
-		dispatch({ type: 'reset' })
+		// dispatch({ type: 'reset' })
 		axios
 			.get(
 				`https://api.giphy.com/v1/gifs/search?api_key=p0er3aF0kTxsVVKmvHXKcba3w5h953Vy&q=${input}&limit=50&offset=0&rating=g&lang=en`
