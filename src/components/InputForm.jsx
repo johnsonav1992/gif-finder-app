@@ -1,12 +1,12 @@
 import { React, useState } from 'react'
 import styles from './InputForm.module.css'
 
-const InputForm = props => {
+const InputForm = ({ onReceiveInput }) => {
 	const [input, setInput] = useState('')
 
   function submitHandler(e) {
     e.preventDefault()
-    props.onReceiveInput(input)
+    onReceiveInput(input)
 	setInput('')
   }
   

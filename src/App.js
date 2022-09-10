@@ -9,9 +9,9 @@ function reducer(state, action) {
 	console.log('reducer fired')
 	switch (action.type) {
 		case 'increment':
-			return { index: state.index += 1 }
+			return { index: (state.index += 1) }
 		case 'decrement':
-			return { index: state.index += 1}
+			return { index: (state.index -= 1) }
 		case 'reset':
 			return { index: (state.index = 0) }
 		default:
@@ -46,14 +46,12 @@ function App() {
 		if (state.index === 0) {
 			dispatch({ type: 'reset' })
 		} else dispatch({ type: 'decrement' })
-		console.log(state.index)
 	}
 
 	const incrementIndex = () => {
 		if (state.index === loadedGifs.length - 1) {
 			dispatch({ type: 'reset' })
 		} else dispatch({ type: 'increment' })
-		console.log(state.index)
 	}
 
 	return (
