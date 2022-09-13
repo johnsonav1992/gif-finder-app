@@ -6,7 +6,6 @@ import InputForm from './components/InputForm'
 import axios from 'axios'
 
 function reducer(state, action) {
-	console.log('reducer fired')
 	switch (action.type) {
 		case 'increment':
 			return { index: (state.index += 1) }
@@ -27,14 +26,13 @@ function App() {
 		dispatch({ type: 'reset' })
 		axios
 			.get(
-				`https://api.giphy.com/v1/gifs/search?api_key=p0er3aF0kTxsVVKmvHXKcba3w5h953Vy&q=${input}&limit=50&offset=0&rating=g&lang=en`
+				`https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_API_KEY}&q=${input}&limit=50&offset=0&rating=g&lang=en`
 			)
 			.then(({ data }) => {
 				const gifs = data.data
 				const gifImgArr = gifs.map(
 					gifObj => gifObj.images.downsized.url
 				)
-				console.log(gifImgArr)
 				setLoadedGifs(gifImgArr)
 			})
 			.catch(err => {
